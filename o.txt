@@ -1,0 +1,44 @@
+<div class="features-bubbles">
+      <div class="bubble-row center">
+        <div class="bubble">
+          <p>Hands-on Training</p>
+          <img src="/imgs/closeup.jpg" alt="Hands-on Training">
+        </div>
+      </div>
+      <div class="bubble-row spaced">
+        <div class="bubble">
+          Career
+          <img src="/imgs/career.jpg" alt="Career">
+        </div>
+        <div class="bubble">
+          Global Network
+          <img src="PATH_TO_IMAGE3" alt="Global Network">
+        </div>
+      </div>
+      <div class="bubble-row spaced">
+        <div class="bubble">
+          Experience
+          <img src="PATH_TO_IMAGE4" alt="Experience">
+        </div>
+        <div class="bubble">
+          Flexible Learning
+          <img src="PATH_TO_IMAGE5" alt="Flexible Learning">
+        </div>
+      </div>
+      <div class="bubble-row spaced">
+        <div class="bubble">
+          Certifications
+          <img src="PATH_TO_IMAGE6" alt="Certifications">
+        </div>
+        <div class="bubble">
+          Growth
+          <img src="PATH_TO_IMAGE7" alt="Growth">
+        </div>
+      </div>
+      <div class="bubble-row center">
+        <div class="bubble">
+          Latest Trends
+          <img src="PATH_TO_IMAGE8" alt="Latest Trends">
+        </div>
+      </div>
+    </div>
