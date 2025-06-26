@@ -91,7 +91,7 @@ body, html {
 }
 
 .right-ul li a.contact-btn {
-  background: linear-gradient(to top, #81004a, #a1005e);
+  background: linear-gradient(90deg, #d73d70, #ae2356, #8a185d);
   border-radius: 20px;
   color: white;
   list-style: none;

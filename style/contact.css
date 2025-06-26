@@ -96,7 +96,7 @@ body, html {
 }
 
 .right-ul li a.contact-btn {
-  background: linear-gradient(to top, #81004a, #a1005e);
+  background: linear-gradient(90deg, #d73d70, #ae2356, #8a185d);
   border-radius: 20px;
   color: white;
   list-style: none;
@@ -241,7 +241,7 @@ textarea {
 
 .send-btn {
   margin-top: 30px;
-  background: linear-gradient(to right, #d742b6, #8e2de2);
+  background: linear-gradient(90deg, #d73d70, #ae2356, #8a185d);
   border: none;
   color: white;
   padding: 12px 24px;
@@ -271,25 +271,27 @@ textarea {
 .contact-method {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
   gap: 20px;
 }
 
 .contact-method img {
   width: 30px;
   height: 30px;
-  background: linear-gradient(to right, #d742b6, #8e2de2);
+  background: linear-gradient(90deg, #d73d70, #ae2356, #8a185d);
   padding: 10px;
   border-radius: 100px;
 }
 
 .contact-method h4 {
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .contact-method p {
   font-size: 14px;
   color: #555;
+  margin: 0px;
 }
 
 .contact-container {
