@@ -68,40 +68,14 @@ showTestimonial(currentTestimonial);
 
 
 
+let menuList = document.getElementById("menuList")
+    menuList.style.maxHeight = "0px";
 
-// Mobile navigation toggle
-const navToggle = document.getElementById("navToggle")
-const navMenu = document.querySelector(".nav-links")
-
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active")
-})
- 
-// Close mobile menu when clicking on links
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("active")
-  })
-})
-
-// Close mobile menu when clicking outside
-document.addEventListener("click", (e) => {
-  if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-    navMenu.classList.remove("active")
-  }
-})
-
-
-// function toggleMenu() {
-//   const menu = document.getElementById('mobileMenu');
-//   menu.classList.toggle('active');
-// }
-
-// window.addEventListener('scroll', () => {
-//   const navbar = document.querySelector('.navbar');
-//   if (window.scrollY > 10) {
-//     navbar.classList.add('scrolled');
-//   } else {
-//     navbar.classList.remove('scrolled');
-//   }
-// });
+    function toggleMenu() {
+        console.log("Clicked!");
+        if (menuList.style.maxHeight === "0px") {
+        menuList.style.maxHeight = "300px"; // adjust as per content height
+        } else {
+        menuList.style.maxHeight = "0px";
+        }
+    }   

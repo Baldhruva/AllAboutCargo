@@ -4,33 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>All About Cargo</title>
-  <link rel="stylesheet" href="/style/style.css" />
+  <link rel="stylesheet" href="/style/load.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 <body>
-  <header class="hero">
+  <header class="hero"> 
     <div class="overlay"></div> <!--pink tint overlay -->
     <nav class="navbar">
       <div class="logo">
-        <img src="/imgs/logo.png" alt="All About Cargo Logo" class="overlay-img"/>
+        <img src="/imgs/logo.png" alt="All About Cargo Logo" class="overlay-img" />
         <span>ALL ABOUT CARGO</span>
       </div>
-      <div class="center-nav">
-        <ul class="nav-links">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/ourteam.html">Our Team</a></li>
-        </ul>
-      </div>
+
+      <ul class="nav-links" id="menuList">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/ourteam.html">Our Team</a></li>
+        <li class="hide-contact">Contact<a href="/contact.html"></a></li>
+      </ul>
+
       <div class="right-nav">
         <ul class="right-ul">
-            <li><a href="/contact.html" class="contact-btn">Contact</a></li>
+          <li><a href="/contact.html" class="contact-btn">Contact</a></li>
         </ul>
       </div>
+
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
     </nav>
-    <hr class="f-hr">
+   
+    <hr class="f-hr" id="navbarhr"/>
+
 
     <div class="hero-content">
       <p class="welcome-tag"># WELCOME TO ALL ABOUT CARGO</p>
@@ -91,66 +98,70 @@
                 </div>
             </div>
         </div>
-
-        <a href="#" class="cta-btn">Learn More →</a>
+        <div class="about-button">
+          <a href="#" class="cta-btn">Learn More →</a>
+        </div>
     </div>
   </section>
 
-  <section class="services-section">
-    <div class="left-content">
-      <p class="section-tag"># SERVICES</p>
-      <h2>Comprehensive<br>Logistics Training for<br><span class="highlight">Career Growth</span></h2>
-      <a href="#" class="services-btn">View all services</a>
-    </div>
+  <section class="services-section"> <!-- aligned in a row -->
+      <div class="upper-container">
+        <div class="left-content"> <!-- Once I scroll down, this div should be fixed -->
+        <p class="section-tag"># SERVICES</p>
+        <h2>Comprehensive<br>Logistics Training for<br><span class="highlight">Career Growth</span></h2>
+        <a href="#" class="services-btn">View all services</a>
+        </div>
 
-    <div class="right-grid">
-      <div class="service-box">
-        <div class="small-img">
+      <div class="right-grid"> <!-- This div will scroll as user scrolls the screen -->
+        <div class="service-box">
+          <div class="small-img">
             <img src="/imgs/wagontruck.png" alt="Freight Icon" />
+          </div>
+          <h4>Freight Forwarding Training</h4>
+          <p>Master end-to-end cargo management & global logistics operations.</p>
         </div>
-        <h4>Freight Forwarding Training</h4>
-        <p>Master end-to-end cargo management & global logistics operations.</p>
-      </div>
-      <div class="service-box">
-        <div class="small-img">
+        <div class="service-box">
+          <div class="small-img">
             <img src="/imgs/breakable.png" alt="Freight Icon" />
-        </div>       
-        <h4>Customs Clearance Training</h4>
-        <p>Learn import/export regulations & documentation processes.</p>
-      </div>
-      <div class="service-box">
-        <div class="small-img">
+          </div>       
+          <h4>Customs Clearance Training</h4>
+          <p>Learn import/export regulations & documentation processes.</p>
+        </div>
+        <div class="service-box">
+          <div class="small-img">
             <img src="/imgs/supplychain.png" alt="Freight Icon" />
+          </div>
+          <h4>Supply Chain & Logistics Courses</h4>
+          <p>Gain expertise in inventory, warehousing & distribution.</p>
         </div>
-        <h4>Supply Chain & Logistics Courses</h4>
-        <p>Gain expertise in inventory, warehousing & distribution.</p>
-      </div>
-      <div class="service-box">
-        <div class="small-img">
+        <div class="service-box">
+          <div class="small-img">
             <img src="/imgs/handlewithcare.png" alt="Freight Icon" />
+          </div>
+          <h4>Dangerous Goods Handling</h4>
+          <p>Get certified in handling hazardous cargo safely & legally.</p>
         </div>
-        <h4>Dangerous Goods Handling</h4>
-        <p>Get certified in handling hazardous cargo safely & legally.</p>
-      </div>
-      <div class="service-box">
-        <div class="small-img">
+        <div class="service-box">
+          <div class="small-img">
             <img src="/imgs/certificate.png" alt="Freight Icon" />
+          </div>
+          <h4>Industry Certification Prep</h4>
+          <p>Prepare for IATA, FIATA, and other key freight industry certifications.</p>
         </div>
-        <h4>Industry Certification Prep</h4>
-        <p>Prepare for IATA, FIATA, and other key freight industry certifications.</p>
-      </div>
-      <div class="service-box">
-        <div class="small-img">
+        <div class="service-box">
+          <div class="small-img">
             <img src="/imgs/permanentjob.png" alt="Freight Icon" />
+          </div>
+          <h4>Placement Assistance</h4>
+          <p>Connect with top employers and kickstart your career.</p>
         </div>
-        <h4>Placement Assistance</h4>
-        <p>Connect with top employers and kickstart your career.</p>
       </div>
+      </div>
+
       <div class="free">
         <h4 class="free-box">Free</h4><p>Let's make something great together</p><p class="free-quote">Get Free Quote</p>
       </div>
-    </div>
-  </section>
+</section>
 
   <section class="who-we-are">
     <div class="left-text">
@@ -173,9 +184,10 @@
                 <div class="circle">100+</div>
                 <p class="circle-side-text">Hiring Partners</p>
             </div>
-        </div>
-
+      </div>
+      <div class="who-we-are-button">
         <a href="#" class="cta-btn">Meet our experts</a>
+      </div>
     </div>
 
     <div class="right-image">
@@ -236,7 +248,6 @@
 
     </div>
 
-
     <div class="expertise-para">
       <p class="expertise-tag"># OUR EXPERTISE</p>
       <h1>Certified and Experienced</h1>
@@ -285,30 +296,26 @@
         <p class="testimonial-tag"># TESTIMONIALS</p>
         <h1>
           Real success<br>
-          stories from our<br>
           <span class="testimonial-highlight">students</span>
         </h1>
       </div>
-      <div class="testimonial-right">
-        <div class="testimonial-main-row">
-          <div class="testimonial-img-box">
-            <img id="testimonial-img" src="/imgs/peepswalking.jpg" alt="Student photo">
-          </div>
-          <div class="testimonial-content">
-            <p id="testimonial-text">
-              All About Cargo transformed my career! The hands-on training and placement assistance helped me land a great job in logistics
-            </p>
-            <p id="testimonial-name">Rahul S.</p>
-          </div>
+      <div class="testimonial-container">
+      <div class="testimonial-image">
+        <img id="testimonial-img" src="/imgs/girlsharestory.jpg" alt="Testimonial">
+      </div>
+      <div class="testimonial-text">
+        <div class="testi-feedback">
+          <p id="testimonial-quote">
+          All About Cargo transformed my career! The hands-on training and placement assistance helped me land a great job in logistics
+          </p>
+          <h4 id="testimonial-name">Rahul S.</h4>
         </div>
-        <div class="testimonial-arrows">
-          <button id="testimonial-prev" class="testimonial-arrow-btn">
-            <img src="/imgs/leftarrow.png" alt="Previous">
-          </button>
-          <button id="testimonial-next" class="testimonial-arrow-btn">
-            <img src="/imgs/arrow.png" alt="Next">
-          </button>
+
+        <div class="testi-navigation">
+          <button class="nav-btn" onclick="prevTestimonial()">←</button>
+          <button class="nav-btn" onclick="nextTestimonial()">→</button>
         </div>
+      </div>
       </div>
     </div>
     <div class="testimonial-banner">
@@ -432,6 +439,10 @@
     </div>
   </footer>
 
-<script src="/scripts/script.js"></script>
+  <div style: "height: 10vh; ">.</div>
+
+
+<script src="https://kit.fontawesome.com/a76efa10c7.js" crossorigin="anonymous"></script>
+<script src="/scripts/newscript.js"></script>
 </body>
 </html>

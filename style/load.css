@@ -10,7 +10,7 @@ body, html {
   height: 100%;
   width: 100%;
   background-color: #f8f5f2;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .hero {
@@ -41,7 +41,6 @@ body, html {
 }
 
 /* Make sure everything else stacks *above* the overlay */
-.navbar,
 .hero-content,
 .stats {
   position: relative;
@@ -55,8 +54,15 @@ body, html {
   align-items: center;
   margin:0px;
   padding: 0px;
+  position: relative;
+  backdrop-filter: blur(10px);
 }
-
+.navbarhr{
+  position: fixed;
+}
+.menu-icon{
+  display: none;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -126,7 +132,6 @@ body, html {
   border-radius: 2px;
   transition: 0.3s ease;
 }
-
 
 .hero-content {
   max-width: 410px;
@@ -373,10 +378,11 @@ font-weight: bold;
 .who-we-are {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: row;
   padding: 60px 80px;
   background-color: #f8f5f2;
   flex-wrap: wrap;
+  gap:10px;
 }
 
 .left-text h2{
@@ -391,6 +397,7 @@ font-weight: bold;
   flex: 1;
   min-width: 320px;
   max-width: 600px;
+  margin-left: 100px;
 }
 
 #section-tag {
@@ -493,7 +500,7 @@ font-weight: bold;
   border-radius: 30px;
   /* object-fit: cover; */
   height: auto;
-  margin-left: 100px;
+  margin-left: 10px;
 }
 
 .about-section {
@@ -675,7 +682,7 @@ font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px;
+    gap: 10px;
 }
 
 .bub-row{
@@ -1314,6 +1321,7 @@ hr {
   color: #222;
 }
 
+
 .testimonial-section {
   background: #3c0836;
   border-radius: 40px;
@@ -1447,7 +1455,6 @@ hr {
   max-width: 800px;
 }
 
-
 .testimonial-section {
   /* ...existing styles... */
   min-height: 420px; /* Ensures enough height for vertical centering */
@@ -1487,7 +1494,6 @@ hr {
   letter-spacing: 0.5px;
   /* Responsive font size for smaller screens */
 }
-
 
 .testimonial-highlight {
   font-weight: 700;
@@ -1584,6 +1590,503 @@ hr {
   background-color: #ff007f;
 }
 
-@media (max-width: 480px){
+
+/* Additional Mobile Responsiveness - Add to end of existing CSS */
+
+/* Mobile Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    margin: 5px;
+    padding: 15px;
+    gap: 15px;
+  }
   
+  .hero-content {
+    max-width: 100%;
+    padding: 20px 20px 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  
+  .welcome-tag {
+    font-size: 15px;
+  }
+  
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 5px;
+  }
+  
+  .stat-card h2 {
+    font-size: 40px;
+  }
+  
+  .stat-card p {
+    font-size: 0.85rem;
+  }
+  nav ul{
+        position: absolute;
+        max-height: 0px;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        backdrop-filter: 100px;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+    .right-ul{
+      display: none;
+    }
+}
+
+/* Mobile Services Section */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 30px 20px;
+    margin: 20px 10px;
+    gap: 30px;
+  }
+  
+  .upper-container {
+    flex-direction: column;
+  }
+  
+  .left-content {
+    position: static;
+    flex: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .left-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .services-btn {
+    max-width: 100%;
+    justify-content: center;
+  }
+  
+  .right-grid {
+    gap: 20px;
+  }
+  
+  .service-box {
+    padding: 20px;
+  }
+}
+
+/* Mobile Who We Are Section */
+@media (max-width: 768px) {
+  .who-we-are {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-text {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .left-text h2 {
+    font-size: 2rem;
+  }
+  
+  #who-we-title {
+    font-size: 40px;
+  }
+  
+  .who-we-stats {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .stat {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .circle-side-text {
+    margin-left: 0;
+    margin-top: 10px;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .right-image img {
+    width: 100%;
+    max-width: 300px;
+    margin-left: 0;
+  }
+  .cta-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #c20075;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    width:150px;
+  }
+  .who-we-are-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+/* Mobile About Section */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  
+  .left-images {
+    margin-right: 0;
+  }
+  
+  .LHS {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    margin: 20px 0;
+  }
+  
+  .experience-badge {
+    position: static;
+    margin-top: 20px;
+    width: 100px;
+  }
+  
+  .right-text {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .right-text h2 {
+    font-size: 2rem;
+  }
+  
+  .feature-row {
+    flex-direction: column;
+    gap: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+  .about-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Mobile Expertise Section */
+@media (max-width: 768px) {
+  .our-expertise{
+    flex-direction: column;
+  }
+  .feature-bub{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .bub img{
+    width: 50px;
+    height: 50px;
+  }
+  .bub p{
+    font-size: 15px;
+  }
+
+  .expertise-para{
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .girl-explaining img{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 550px;
+  }
+}
+
+/* Mobile How We Work */
+@media (max-width: 768px) {
+  .how-we-work {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .how-we-work h2 {
+    font-size: 35px;
+    text-align: center;
+  }
+  
+  #how-we-workhighlight {
+    font-size: 35px;
+    text-align: center;
+  }
+  
+  .steps-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .step {
+    max-width: 100%;
+  }
+  
+  .step h3 {
+    font-size: 20px;
+  }
+  
+  .step p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* Mobile FAQ Section */
+@media (max-width: 768px) {
+  .faq-section {
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 30px;
+  }
+  
+  .faq-left,
+  .faq-right {
+    padding: 0 20px;
+    min-width: 100%;
+  }
+  
+  .faq-left h1 {
+    font-size: 2rem;
+  }
+  
+  .faq-highlight {
+    font-size: 1.8rem;
+  }
+  
+  .faq-contact-card {
+    max-width: 450px;
+  }
+  .faq-accordion{
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .faq-question {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  
+  .faq-answer {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+/* Mobile Testimonial Section */
+@media (max-width: 768px) {
+  .testimonial-section {
+    margin: 20px 10px;
+    padding: 30px 20px;
+    min-height: auto;
+  }
+  
+  .testi {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .testimonial-left {
+    min-width: 100%;
+    text-align: center;
+  }
+  
+  .testimonial-left h1 {
+    font-size: 2rem;
+  }
+  
+  .testimonial-right {
+    min-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .testimonial-container {
+    flex-direction: column;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    max-height: none;
+    margin: 10px 0;
+    padding: 20px;
+  }
+  
+  .testimonial-image {
+    max-width: 100%;
+    min-height: auto;
+  }
+  
+  .testimonial-image img {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  
+  .testimonial-text {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    max-height: none;
+    text-align: center;
+  }
+  
+  .testi-navigation {
+    justify-content: center;
+    min-width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  
+  .testimonial-banner {
+    font-size: 1rem;
+    padding: 12px 20px;
+    max-width: 100%;
+  }
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+  .custom-footer {
+    margin: 20px 10px;
+    padding: 20px 15px 0 15px;
+  }
+  
+  .footer-content {
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .footer-left h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .footer-social {
+    text-align: center;
+  }
+  
+  .footer-services,
+  .footer-contact {
+    text-align: left;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-bottom nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footer-copyright {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile Free Quote Section */
+@media (max-width: 768px) {
+  .free {
+    width: 100%;
+    max-width: 300px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .free-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Additional Small Screen Adjustments */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+  
+  .left-text h2,
+  .right-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .expertise-para h1 {
+    font-size: 24px;
+  }
+  
+  #expertise-highlight {
+    font-size: 24px;
+  }
+  
+  .how-we-work h2,
+  #how-we-workhighlight {
+    font-size: 28px;
+  }
+  
+  .faq-left h1 {
+    font-size: 1.5rem;
+  }
+  
+  .testimonial-left h1 {
+    font-size: 1.5rem;
+  }
+  
+  .bub {
+    font-size: 14px;
+  }
+  
+  .step p {
+    font-size: 14px;
+  }
 }
