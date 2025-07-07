@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: "Outfit", sans-serif;
-}
+} 
 
 body, html {
   height: 100%;
@@ -584,4 +584,57 @@ hr {
     text-align: center;
     justify-content: center;
   }
+}
+
+@media (max-width: 600px) {
+  .contact-left h2 {
+    font-size: 26px;
+  }
+
+  .contact-left .section-tag {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .input-group label {
+    font-size: 13px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .send-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .send-btn img {
+    width: 12px;
+    height: 12px;
+  }
+  #us{
+    font-size: 30px;
+  }
+}
+
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 10px;
+  font-size: 15px;
+  background-color: transparent;
+  outline: none;
+  width: 100%; /* ✨ This makes it stay inside the div */
+  box-sizing: border-box; /* Prevents padding from overflowing */
 }

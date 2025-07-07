@@ -18,7 +18,7 @@ body, html {
   background-size: cover;
   background-position: center;
   color: white;
-  height: 95vh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1596,7 +1596,7 @@ hr {
 /* Mobile Hero Section */
 @media (max-width: 768px) {
   .hero {
-    height: 100vh;
+    height: 90vh;
     margin: 5px;
     padding: 15px;
     gap: 15px;
@@ -1697,15 +1697,14 @@ hr {
 @media (max-width: 768px) {
   .who-we-are {
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 0px;
     gap: 30px;
     justify-content: center;
     align-items: center;
+    margin-left: 0px 0px 0px;
   }
-  
-  .left-text {
-    min-width: 100%;
-    max-width: 100%;
+  .left-text{
+    margin-left: 10px;
   }
   
   .left-text h2 {
@@ -1730,7 +1729,7 @@ hr {
   .circle-side-text {
     margin-left: 0;
     margin-top: 10px;
-    max-width: 200px;
+    max-width: 100px;
     text-align: center;
   }
   
@@ -1836,6 +1835,23 @@ hr {
     margin-right: 10px;
     width: 100%;
     max-width: 550px;
+  }
+  #exp{
+    margin-left: 50px;
+    margin-right: 5px;
+  }
+  #flexlearn{
+    margin-right: 40px;
+    margin-left: 5px;
+    padding-left: 10px;
+    max-width: 210px;
+    min-width: 210px;
+  }
+  .girl-explaining img{
+    margin-top: 20px;
+  }
+  #flexlearn-text{
+    font-size: px;
   }
 }
 

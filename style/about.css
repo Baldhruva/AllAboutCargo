@@ -847,3 +847,82 @@ hr {
     justify-content: center;
   }
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .coaching-card {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .card-left,
+  .card-right {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .card-left h2 {
+    font-size: 36px;
+  }
+
+  .card-left p {
+    font-size: 18px;
+  }
+
+  .card-right {
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .coach-col {
+    gap: 40px;
+  }
+
+  .stat h3 {
+    font-size: 28px;
+  }
+
+  .stat p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-left h2 {
+    font-size: 28px;
+    display: flex;
+    align-items: left;
+  }
+
+  .card-left p {
+    font-size: 16px;
+  }
+
+  .card-right {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .coach-col {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .stat {
+    width: auto;
+    text-align: center;
+  }
+
+  .stat h3 {
+    font-size: 24px;
+  }
+
+  .stat p {
+    font-size: 14px;
+  }
+}

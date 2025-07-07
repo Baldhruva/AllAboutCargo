@@ -676,6 +676,9 @@ hr {
     text-align: center;
     padding: 20px;
   }
+  #us{
+    font-size: 30px;
+  }
   
   .footer-bottom nav {
     flex-direction: column;
